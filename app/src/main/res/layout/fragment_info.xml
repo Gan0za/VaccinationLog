@@ -28,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/header_window_information"
-                android:textSize="25sp" />
+                android:textSize="@dimen/header_size" />
 
         </LinearLayout>
 

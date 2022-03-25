@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-<FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".AddNewTaskFragment">
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
 
-
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        tools:context=".AddNewTaskFragment"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="16sp"
-            android:layout_marginBottom="16sp">
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16sp"
+                android:layout_marginBottom="16sp">
 
             <ImageView
                 android:id="@+id/imageView"
@@ -31,95 +32,93 @@
                 style="Введите данные вакцины:"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Введите данные вакцыны:"
-                android:textSize="25sp" />
+                android:text="@string/header_add_new_task"
+                android:textSize="@dimen/header_size" />
 
         </LinearLayout>
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/textView"
-                    style="@style/main_menu_buttons"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Выберите пациента:"/>
+                    android:orientation="vertical" >
 
-                <Spinner
-                    android:id="@+id/spinner"
-                    style="@style/main_menu_buttons"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:minHeight="48dp"
-                    tools:listitem="Test 1"
-                    android:layout_marginTop="8sp"/>
+                    <TextView
+                        android:id="@+id/textView"
+                        style="@style/main_menu_buttons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/header_add_new_task"/>
 
-                <TextView
-                    android:id="@+id/textView2"
-                    style="@style/main_menu_buttons"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Выберите вакцину:"
-                    android:layout_marginTop="16sp"/>
+                    <Spinner
+                        android:id="@+id/spinner"
+                        style="@style/main_menu_buttons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        tools:listitem="Test 1"
+                        android:layout_marginTop="8sp"/>
 
-                <Spinner
-                    android:id="@+id/spinner2"
-                    style="@style/main_menu_buttons"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:minHeight="48dp"
-                    tools:listitem="Test 1"
-                    android:layout_marginTop="8sp"/>
+                    <TextView
+                        android:id="@+id/textView2"
+                        style="@style/main_menu_buttons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vaccine_add_new_task"
+                        android:layout_marginTop="16sp"/>
 
-                <TextView
-                    android:id="@+id/textView3"
-                    style="@style/main_menu_buttons"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Выберите дату и время привития:"
-                    android:layout_marginTop="16sp"/>
+                    <Spinner
+                        android:id="@+id/spinner2"
+                        style="@style/main_menu_buttons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        tools:listitem="Test 1"
+                        android:layout_marginTop="8sp"/>
 
-                <EditText
-                    android:id="@+id/editTextDate"
-                    style="@style/main_menu_buttons"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="@string/date_window_newuser"
-                    android:inputType="date"
-                    android:textAlignment="center"
-                    android:layout_marginTop="8sp"/>
+                    <TextView
+                        android:id="@+id/textView3"
+                        style="@style/main_menu_buttons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/date_add_new_task"
+                        android:layout_marginTop="16sp"/>
 
-                <EditText
-                    android:id="@+id/editTextTime"
-                    style="@style/main_menu_buttons"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="11:00"
-                    android:inputType="time"
-                    android:textAlignment="center"
-                    android:layout_marginTop="8sp"/>
+                    <EditText
+                        android:id="@+id/editTextDate"
+                        style="@style/main_menu_buttons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="@string/date_edit_text"
+                        android:inputType="date"
+                        android:textAlignment="center"
+                        android:layout_marginTop="8sp"
+                        android:autofillHints="@string/date_edit_text" />
 
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:layout_gravity="end"
-                    tools:srcCompat="@android:drawable/ic_menu_save"
-                    android:layout_marginTop="16sp"
-                    android:layout_marginRight="26sp"/>
+                    <EditText
+                        android:id="@+id/editTextTime"
+                        style="@style/main_menu_buttons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="@string/time_edit_text"
+                        android:inputType="time"
+                        android:textAlignment="center"
+                        android:layout_marginTop="8sp"
+                        android:autofillHints="@string/time_edit_text"/>
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        tools:srcCompat="@android:drawable/ic_menu_save"
+                        style="@style/save_button_style" />
 
             </LinearLayout>
         </ScrollView>
 
-    </LinearLayout>
-</FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
 </layout>

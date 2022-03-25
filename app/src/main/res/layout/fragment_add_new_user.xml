@@ -24,14 +24,15 @@
                 android:id="@+id/imageView"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                tools:srcCompat="?attr/homeAsUpIndicator" />
+                tools:srcCompat="?attr/homeAsUpIndicator"
+                android:contentDescription="@string/button_back"/>
 
             <TextView
                 style="@style/main_menu_buttons"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/header_window_newuser"
-                android:textSize="25sp" />
+                android:textSize="@dimen/header_size" />
 
         </LinearLayout>
 
@@ -48,10 +49,10 @@
                     style="@style/main_menu_buttons"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:autofillHints=""
                     android:hint="@string/surname_window_newuser"
                     android:inputType="text"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:autofillHints="@string/surname_window_newuser"/>
 
                 <EditText
                     style="@style/main_menu_buttons"
@@ -59,7 +60,8 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/name_window_newuser"
                     android:inputType="text"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:autofillHints="@string/name_window_newuser" />
 
                 <EditText
                     style="@style/main_menu_buttons"
@@ -67,7 +69,8 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/middlename_window_newuser"
                     android:inputType="text"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:autofillHints="@string/middlename_window_newuser"/>
 
                 <TextView
                     style="@style/main_menu_buttons"
@@ -81,19 +84,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="@string/date_window_newuser"
+                    android:hint="@string/date_edit_text"
                     android:inputType="date"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:autofillHints="@string/date_edit_text"/>
 
                 <ImageView
                     android:id="@+id/imageView4"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="20sp"
-                    android:layout_marginEnd="@dimen/indent_edges"
-                    tools:srcCompat="@android:drawable/ic_menu_save" />
+                    tools:srcCompat="@android:drawable/ic_menu_save"
+                    style="@style/save_button_style" />
+
             </LinearLayout>
+            
         </ScrollView>
 
     </LinearLayout>

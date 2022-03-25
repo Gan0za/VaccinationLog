@@ -12,4 +12,12 @@
         <item name="android:textSize">@dimen/text_size</item>
         <item name="android:textAlignment">center</item>
     </style>
+
+    <style name="save_button_style">
+        <item name="android:layout_width">@dimen/save_button_size</item>
+        <item name="android:layout_height">@dimen/save_button_size</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:layout_marginTop">@dimen/indent_big</item>
+        <item name="android:layout_marginEnd">@dimen/indent_edges</item>
+    </style>
 </resources>

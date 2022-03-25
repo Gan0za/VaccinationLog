@@ -27,8 +27,8 @@
                 style="Введите данные вакцины:"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Информация о пациентах:"
-                android:textSize="25sp" />
+                android:text="@string/header_select_user"
+                android:textSize="@dimen/header_size" />
 
         </LinearLayout>
 

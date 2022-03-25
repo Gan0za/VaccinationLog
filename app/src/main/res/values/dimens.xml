@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="text_size">20dp</dimen>
-    <dimen name="indent_edges">25dp</dimen>
-    <dimen name="indent_middle">5dp</dimen>
+    <dimen name="text_size">20sp</dimen>
+    <dimen name="indent_edges">26sp</dimen>
+    <dimen name="indent_middle">8sp</dimen>
+    <dimen name="indent_big">16sp</dimen>
+    <dimen name="header_size">20sp</dimen>
+    <dimen name="save_button_size">45sp</dimen>
 </resources>

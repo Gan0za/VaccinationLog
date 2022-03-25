@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Журнал вакцинации</string>
+    <!--  Служебные строки  -->
+    <string name="button_back">Кнопка назад</string>
     <!--  Строки для окна "Главное Меню"  -->
     <string name="button_new_user">Новый пользователь</string>
     <string name="button_new_task">Новая запись</string>
@@ -16,4 +18,15 @@
     <!--  Строки для окна "Информация"  -->
     <string name="header_window_information">Информация</string>
     <string name="text_window_information">Данное приложение создано для ведения статистики вакцинации.</string>
+    <!--  Строки для окна "Информация о вакцине"  -->
+    <string name="header_select_task">Информация о вакцине:</string>
+    <!--  Строки для окна "Настройки"  -->
+    <string name="header_settings_menu">Настройка:</string>
+    <!--  Строки для окна "Информация о пациентах"  -->
+    <string name="header_select_user">Информация о пациентах:</string>
+    <!--  Строки для окна "Данные о вакцинах"  -->
+    <string name="header_add_new_task">Введите данные вакцыны:</string>
+    <string name="patient_add_new_task">Выберите пациента:</string>
+    <string name="vaccine_add_new_task">Выберите вакцину:</string>
+    <string name="date_add_new_task">Выберите дату и время привития:</string>
 </resources>

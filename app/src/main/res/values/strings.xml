@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Vaccination log</string>
+    <!--  Служебные строки  -->
+    <string name="button_back">Back button</string>
+    <string name="date_edit_text" translatable="false">01.01.2022</string>
+    <string name="time_edit_text" translatable="false">11:00</string>
     <!--  Строки для окна "Главное Меню"  -->
     <string name="button_new_user">New user</string>
     <string name="button_new_task">New tasks</string>
@@ -16,4 +20,15 @@
     <!--  Строки для окна "Информация"  -->
     <string name="header_window_information">Information</string>
     <string name="text_window_information">This application is designed to maintain vaccination statistics.</string>
+    <!--  Строки для окна "Информация о вакцине"  -->
+    <string name="header_select_task">Information about the vaccine:</string>
+    <!--  Строки для окна "Настройки"  -->
+    <string name="header_settings_menu">Settings:</string>
+    <!--  Строки для окна "Информация о пациентах"  -->
+    <string name="header_select_user">Patient Information:</string>
+    <!--  Строки для окна "Данные о вакцинах"  -->
+    <string name="header_add_new_task">Enter the data vaccyna:</string>
+    <string name="patient_add_new_task">Select a patient:</string>
+    <string name="vaccine_add_new_task">Choose a vaccine:</string>
+    <string name="date_add_new_task">Select the date and time of vaccination:</string>
 </resources>

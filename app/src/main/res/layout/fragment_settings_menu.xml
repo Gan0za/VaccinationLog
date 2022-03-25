@@ -21,14 +21,15 @@
                 android:id="@+id/imageView"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                tools:srcCompat="?attr/homeAsUpIndicator" />
+                tools:srcCompat="?attr/homeAsUpIndicator"
+                android:contentDescription="@string/button_back" />
 
             <TextView
                 style="Введите данные вакцины:"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Настройки:"
-                android:textSize="25sp" />
+                android:text="@string/header_settings_menu"
+                android:textSize="@dimen/header_size" />
 
         </LinearLayout>
 
