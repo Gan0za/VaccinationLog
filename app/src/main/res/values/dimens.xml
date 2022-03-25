@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size">20dp</dimen>
+    <dimen name="indent_edges">25dp</dimen>
+    <dimen name="indent_middle">5dp</dimen>
+</resources>

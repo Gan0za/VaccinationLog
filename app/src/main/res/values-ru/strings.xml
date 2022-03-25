@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Журнал вакцинации</string>
+    <!--  Строки для окна "Главное Меню"  -->
+    <string name="button_new_user">Новый пользователь</string>
+    <string name="button_new_task">Новая запись</string>
+    <string name="button_select_all_tasks">Список записей</string>
+    <string name="settings_button">кнопка настроек</string>
+    <!--  Строки для окна "Новый пользователь"  -->
+    <string name="header_window_newuser">Введите данные пациента:</string>
+    <string name="surname_window_newuser">Фамилия</string>
+    <string name="name_window_newuser">Имя</string>
+    <string name="middlename_window_newuser">Отчество</string>
+    <string name="text_window_newuser">День рождения пациента:</string>
+    <!--  Строки для окна "Информация"  -->
+    <string name="header_window_information">Информация</string>
+    <string name="text_window_information">Данное приложение создано для ведения статистики вакцинации.</string>
+</resources>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainMenuFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:context=".MainActivity">
+
+            <Button
+                android:id="@+id/newUser"
+                style="@style/main_menu_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_new_user" />
+
+            <Button
+                android:id="@+id/newTasks"
+                style="@style/main_menu_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_new_task" />
+
+            <Button
+                android:id="@+id/selectAllTasks"
+                style="@style/main_menu_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_select_all_tasks" />
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/settings_menu"
+            android:layout_width="118dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="25dp"
+            android:clickable="true"
+            android:contentDescription="@string/settings_button"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/back"
+            tools:ignore="RedundantDescriptionCheck,DuplicateSpeakableTextCheck"
+            tools:srcCompat="@android:drawable/ic_menu_preferences" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/info_menu"
+            android:layout_width="118dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:clickable="true"
+            android:contentDescription="@string/settings_button"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/back"
+            app:layout_constraintVertical_bias="0.498"
+            tools:ignore="RedundantDescriptionCheck"
+            tools:srcCompat="@android:drawable/ic_dialog_info" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

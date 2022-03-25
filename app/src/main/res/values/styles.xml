@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="main_menu_buttons">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:layout_marginStart">@dimen/indent_edges</item>
+        <item name="android:layout_marginTop">@dimen/indent_middle</item>
+        <item name="android:layout_marginEnd">@dimen/indent_edges</item>
+    </style>
+</resources>
