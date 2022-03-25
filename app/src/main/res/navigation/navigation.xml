@@ -16,6 +16,18 @@
         <action
             android:id="@+id/action_mainMenuFragment_to_infoFragment"
             app:destination="@id/infoFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_addNewTaskFragment"
+            app:destination="@id/addNewTaskFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_selectTaskFragment"
+            app:destination="@id/selectTaskFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_settingsMenuFragment"
+            app:destination="@id/settingsMenuFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_selectUserFragment"
+            app:destination="@id/selectUserFragment" />
     </fragment>
     <fragment
         android:id="@+id/addNewUserFragment"
@@ -27,4 +39,23 @@
         android:name="com.verevkina.vaccinationlog.InfoFragment"
         android:label="fragment_info"
         tools:layout="@layout/fragment_info" />
+    <fragment
+        android:id="@+id/addNewTaskFragment"
+        android:name="com.verevkina.vaccinationlog.AddNewTaskFragment"
+        android:label="AddNewTaskFragment" />
+    <fragment
+        android:id="@+id/selectTaskFragment"
+        android:name="com.verevkina.vaccinationlog.SelectTaskFragment"
+        android:label="fragment_select_task"
+        tools:layout="@layout/fragment_select_task" />
+    <fragment
+        android:id="@+id/settingsMenuFragment"
+        android:name="com.verevkina.vaccinationlog.SettingsMenuFragment"
+        android:label="fragment_settings_menu"
+        tools:layout="@layout/fragment_settings_menu" />
+    <fragment
+        android:id="@+id/selectUserFragment"
+        android:name="com.verevkina.vaccinationlog.SelectUserFragment"
+        android:label="fragment_select_user"
+        tools:layout="@layout/fragment_select_user" />
 </navigation>

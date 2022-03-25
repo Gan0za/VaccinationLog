@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
 <FrameLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddNewUserFragment">
+    tools:context=".AddNewTaskFragment">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +19,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="16sp"
-            android:layout_marginBottom="10sp">
+            android:layout_marginBottom="16sp">
 
             <ImageView
                 android:id="@+id/imageView"
@@ -27,10 +28,10 @@
                 tools:srcCompat="?attr/homeAsUpIndicator" />
 
             <TextView
-                style="@style/main_menu_buttons"
+                style="Введите данные вакцины:"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/header_window_newuser"
+                android:text="Введите данные вакцыны:"
                 android:textSize="25sp" />
 
         </LinearLayout>
@@ -44,55 +45,78 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
 
-                <EditText
+                <TextView
+                    android:id="@+id/textView"
                     style="@style/main_menu_buttons"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:autofillHints=""
-                    android:hint="@string/surname_window_newuser"
-                    android:inputType="text"
-                    android:textAlignment="center" />
+                    android:text="Выберите пациента:"/>
 
-                <EditText
+                <Spinner
+                    android:id="@+id/spinner"
                     style="@style/main_menu_buttons"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/name_window_newuser"
-                    android:inputType="text"
-                    android:textAlignment="center" />
-
-                <EditText
-                    style="@style/main_menu_buttons"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/middlename_window_newuser"
-                    android:inputType="text"
-                    android:textAlignment="center" />
+                    android:minHeight="48dp"
+                    tools:listitem="Test 1"
+                    android:layout_marginTop="8sp"/>
 
                 <TextView
+                    android:id="@+id/textView2"
                     style="@style/main_menu_buttons"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15sp"
-                    android:text="@string/text_window_newuser" />
+                    android:text="Выберите вакцину:"
+                    android:layout_marginTop="16sp"/>
+
+                <Spinner
+                    android:id="@+id/spinner2"
+                    style="@style/main_menu_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    tools:listitem="Test 1"
+                    android:layout_marginTop="8sp"/>
+
+                <TextView
+                    android:id="@+id/textView3"
+                    style="@style/main_menu_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Выберите дату и время привития:"
+                    android:layout_marginTop="16sp"/>
 
                 <EditText
+                    android:id="@+id/editTextDate"
                     style="@style/main_menu_buttons"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/date_window_newuser"
                     android:inputType="date"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:layout_marginTop="8sp"/>
+
+                <EditText
+                    android:id="@+id/editTextTime"
+                    style="@style/main_menu_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="11:00"
+                    android:inputType="time"
+                    android:textAlignment="center"
+                    android:layout_marginTop="8sp"/>
 
                 <ImageView
                     android:id="@+id/imageView4"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:layout_gravity="end"
-                    android:layout_marginTop="20sp"
-                    android:layout_marginEnd="@dimen/indent_edges"
-                    tools:srcCompat="@android:drawable/ic_menu_save" />
+                    tools:srcCompat="@android:drawable/ic_menu_save"
+                    android:layout_marginTop="16sp"
+                    android:layout_marginRight="26sp"/>
+
             </LinearLayout>
         </ScrollView>
 
