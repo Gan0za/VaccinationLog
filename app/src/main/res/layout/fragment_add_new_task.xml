@@ -59,7 +59,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:minHeight="48dp"
-                        tools:listitem="Test 1"
+                        android:entries="@array/spinner_test"
                         android:layout_marginTop="8sp"/>
 
                     <TextView
@@ -76,7 +76,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:minHeight="48dp"
-                        tools:listitem="Test 1"
+                        android:entries="@array/spinner_test"
                         android:layout_marginTop="8sp"/>
 
                     <TextView

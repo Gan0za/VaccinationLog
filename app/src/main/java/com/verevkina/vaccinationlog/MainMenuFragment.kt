@@ -15,8 +15,6 @@ class MainMenuFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
-        //return inflater.inflate(R.layout.fragment_main_menu, container, false)
         val binding = DataBindingUtil.inflate<FragmentMainMenuBinding>(
             inflater, R.layout.fragment_main_menu, container, false)
 
