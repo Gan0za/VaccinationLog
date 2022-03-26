@@ -3,38 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-<FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".AddNewUserFragment">
-
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="16sp"
-            android:layout_marginBottom="10sp">
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                tools:srcCompat="?attr/homeAsUpIndicator"
-                android:contentDescription="@string/button_back"/>
-
-            <TextView
-                style="@style/main_menu_buttons"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/header_window_newuser"
-                android:textSize="@dimen/header_size" />
-
-        </LinearLayout>
+        android:layout_height="match_parent"
+        tools:context=".AddNewUserFragment">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -95,9 +67,6 @@
                     style="@style/save_button_style" />
 
             </LinearLayout>
-
         </ScrollView>
-
-    </LinearLayout>
-</FrameLayout>
+    </FrameLayout>
 </layout>

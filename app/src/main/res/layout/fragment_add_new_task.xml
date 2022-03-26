@@ -2,40 +2,12 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".AddNewTaskFragment"
         android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="16sp"
-                android:layout_marginBottom="16sp">
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                tools:srcCompat="?attr/homeAsUpIndicator" />
-
-            <TextView
-                style="Введите данные вакцины:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/header_add_new_task"
-                android:textSize="@dimen/header_size" />
-
-        </LinearLayout>
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -116,9 +88,8 @@
                         tools:srcCompat="@android:drawable/ic_menu_save"
                         style="@style/save_button_style" />
 
-            </LinearLayout>
-        </ScrollView>
+                </LinearLayout>
+            </ScrollView>
 
-        </LinearLayout>
     </FrameLayout>
 </layout>

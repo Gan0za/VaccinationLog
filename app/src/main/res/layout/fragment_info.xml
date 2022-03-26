@@ -8,52 +8,23 @@
         android:layout_height="match_parent"
         tools:context=".InfoFragment">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15sp"
-                android:layout_marginBottom="10sp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/backButton"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    tools:srcCompat="?attr/homeAsUpIndicator" />
+                android:orientation="vertical">
 
                 <TextView
                     style="@style/main_menu_buttons"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/header_window_information"
-                    android:textSize="@dimen/header_size" />
-
-            </LinearLayout>
-
-
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_marginTop="15sp"
+                    android:text="@string/text_window_information" />
 
-                    <TextView
-                        style="@style/main_menu_buttons"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="15sp"
-                        android:text="@string/text_window_information" />
-
-                </LinearLayout>
-            </ScrollView>
-        </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
     </FrameLayout>
 </layout>

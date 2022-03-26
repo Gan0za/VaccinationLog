@@ -32,7 +32,7 @@
     <string name="vaccine_add_new_task">Choose a vaccine:</string>
     <string name="date_add_new_task">Select the date and time of vaccination:</string>
     <!--  Tests  -->
-    <string-array name="spinner_test">
+        <string-array name="spinner_test">
         <item>Test 1</item>
         <item>Test 2</item>
         <item>Test 3</item>

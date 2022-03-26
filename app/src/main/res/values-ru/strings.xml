@@ -21,11 +21,11 @@
     <!--  Строки для окна "Информация о вакцине"  -->
     <string name="header_select_task">Информация о вакцине:</string>
     <!--  Строки для окна "Настройки"  -->
-    <string name="header_settings_menu">Настройка:</string>
+    <string name="header_settings_menu">Настройки:</string>
     <!--  Строки для окна "Информация о пациентах"  -->
     <string name="header_select_user">Информация о пациентах:</string>
     <!--  Строки для окна "Данные о вакцинах"  -->
-    <string name="header_add_new_task">Введите данные вакцыны:</string>
+    <string name="header_add_new_task">Введите данные вакцины:</string>
     <string name="patient_add_new_task">Выберите пациента:</string>
     <string name="vaccine_add_new_task">Выберите вакцину:</string>
     <string name="date_add_new_task">Выберите дату и время привития:</string>
