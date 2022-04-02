@@ -83,10 +83,9 @@
                         android:layout_marginTop="8sp"
                         android:autofillHints="@string/time_edit_text"/>
 
-                    <ImageView
-                        android:id="@+id/imageView4"
-                        tools:srcCompat="@android:drawable/ic_menu_save"
-                        style="@style/save_button_style" />
+                    <Button
+                        android:text="@string/save_button"
+                        style="@style/save_button_style"/>
 
                 </LinearLayout>
             </ScrollView>

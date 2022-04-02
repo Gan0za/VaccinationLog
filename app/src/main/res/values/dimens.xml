@@ -5,5 +5,5 @@
     <dimen name="indent_middle">8sp</dimen>
     <dimen name="indent_big">16sp</dimen>
     <dimen name="header_size">20sp</dimen>
-    <dimen name="save_button_size">45sp</dimen>
+    <dimen name="save_button_size_height">45sp</dimen>
 </resources>

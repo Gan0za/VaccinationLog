@@ -18,6 +18,11 @@
 
                 <!-- Контент -->
 
+                <TextView
+                    android:id="@+id/allUsers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/main_menu_buttons"/>
             </LinearLayout>
         </ScrollView>
     </FrameLayout>

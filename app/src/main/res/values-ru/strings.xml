@@ -9,6 +9,7 @@
     <string name="button_select_all_tasks">Список записей</string>
     <string name="button_select_all_user">Список пациентов</string>
     <string name="settings_button">кнопка настроек</string>
+    <string name="save_button">Отправить</string>
     <!--  Строки для окна "Новый пользователь"  -->
     <string name="header_window_newuser">Введите данные пациента:</string>
     <string name="surname_window_newuser">Фамилия</string>

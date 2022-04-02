@@ -18,6 +18,7 @@
                 android:orientation="vertical" >
 
                 <EditText
+                    android:id="@+id/SurnameUser"
                     style="@style/main_menu_buttons"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -27,6 +28,7 @@
                     android:autofillHints="@string/surname_window_newuser"/>
 
                 <EditText
+                    android:id="@+id/NameUser"
                     style="@style/main_menu_buttons"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -36,6 +38,7 @@
                     android:autofillHints="@string/name_window_newuser" />
 
                 <EditText
+                    android:id="@+id/MiddleNameUser"
                     style="@style/main_menu_buttons"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -52,6 +55,7 @@
                     android:text="@string/text_window_newuser" />
 
                 <EditText
+                    android:id="@+id/BirthdayUser"
                     style="@style/main_menu_buttons"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -61,10 +65,10 @@
                     android:textAlignment="center"
                     android:autofillHints="@string/date_edit_text"/>
 
-                <ImageView
-                    android:id="@+id/imageView4"
-                    tools:srcCompat="@android:drawable/ic_menu_save"
-                    style="@style/save_button_style" />
+                <Button
+                    android:id="@+id/save_new_user"
+                    android:text="@string/save_button"
+                    style="@style/save_button_style"/>
 
             </LinearLayout>
         </ScrollView>

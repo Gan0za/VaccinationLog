@@ -14,8 +14,8 @@
     </style>
 
     <style name="save_button_style">
-        <item name="android:layout_width">@dimen/save_button_size</item>
-        <item name="android:layout_height">@dimen/save_button_size</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/save_button_size_height</item>
         <item name="android:layout_gravity">end</item>
         <item name="android:layout_marginTop">@dimen/indent_big</item>
         <item name="android:layout_marginEnd">@dimen/indent_edges</item>
