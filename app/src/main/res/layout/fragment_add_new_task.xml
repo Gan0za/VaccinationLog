@@ -26,7 +26,7 @@
                         android:text="@string/header_add_new_task"/>
 
                     <Spinner
-                        android:id="@+id/spinner"
+                        android:id="@+id/user_id"
                         style="@style/main_menu_buttons"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -43,7 +43,24 @@
                         android:layout_marginTop="16sp"/>
 
                     <Spinner
-                        android:id="@+id/spinner2"
+                        android:id="@+id/vaccination_id"
+                        style="@style/main_menu_buttons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        android:entries="@array/spinner_test"
+                        android:layout_marginTop="8sp"/>
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        style="@style/main_menu_buttons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/component_add_new_task"
+                        android:layout_marginTop="16sp"/>
+
+                    <Spinner
+                        android:id="@+id/component_number"
                         style="@style/main_menu_buttons"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -84,6 +101,7 @@
                         android:autofillHints="@string/time_edit_text"/>
 
                     <Button
+                        android:id="@+id/addNewTasks"
                         android:text="@string/save_button"
                         style="@style/save_button_style"/>
 

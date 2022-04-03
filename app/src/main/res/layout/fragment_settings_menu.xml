@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,7 +16,77 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
 
-                <!-- Контент -->
+                <TextView
+                    style="@style/main_menu_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:text="@string/text_clear_all_users" />
+                <Button
+                    android:id="@+id/clear_all_user"
+                    android:text="@string/clear_button"
+                    style="@style/save_button_style"/>
+
+                <TextView
+                    style="@style/main_menu_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16sp"
+                    android:text="@string/text_clear_all_tasks" />
+                <Button
+                    android:id="@+id/clear_all_task"
+                    android:text="@string/clear_button"
+                    style="@style/save_button_style"/>
+
+                <TextView
+                    style="@style/main_menu_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16sp"
+                    android:text="@string/vaccination_header" />
+
+                <EditText
+                    android:id="@+id/vaccination_name"
+                    style="@style/main_menu_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/vaccination_hint"
+                    android:inputType="text"
+                    android:textAlignment="center"
+                    android:autofillHints="Название новой вакцины"
+                   />
+
+                <CheckBox
+                    android:id="@+id/vaccination_component"
+                    style="@style/main_menu_buttons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:checked="false"
+                    android:text="@string/vaccination_checkbox" />
+                <Button
+                    android:id="@+id/save_new_vaccine"
+                    style="@style/save_button_style"
+                    android:text="@string/save_button" />
+
+                <TextView
+                    style="@style/main_menu_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16sp"
+                    android:text="@string/vaccination_header_list" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/select_vaccines"
+                    style="@style/main_menu_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    />
+                <Button
+                    android:id="@+id/clear_all_vaccination"
+                    android:text="@string/clear_button"
+                    style="@style/save_button_style"/>
 
             </LinearLayout>
         </ScrollView>

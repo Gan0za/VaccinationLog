@@ -10,14 +10,14 @@
     <string name="button_select_all_tasks">List of entries</string>
     <string name="button_select_all_user">List of user</string>
     <string name="settings_button">settings button</string>
-    <string name="save_button">Send</string>
     <!--  Строки для окна "Новый пользователь"  -->
     <string name="header_window_newuser">Enter the patient\'s details</string>
     <string name="surname_window_newuser">Surname</string>
     <string name="name_window_newuser">Name</string>
     <string name="middlename_window_newuser">Middle Name</string>
     <string name="text_window_newuser">Patient\'s birthday:</string>
-    <string name="date_window_newuser" translatable="false">01.01.2022</string>
+    <string name="toast_text">The user has been successfully added!</string>
+    <string name="toast_error">Fill in all the fields!</string>
     <!--  Строки для окна "Информация"  -->
     <string name="header_window_information">Information</string>
     <string name="text_window_information">This application is designed to maintain vaccination statistics.</string>
@@ -25,17 +25,33 @@
     <string name="header_select_task">Information about the vaccine:</string>
     <!--  Строки для окна "Настройки"  -->
     <string name="header_settings_menu">Settings:</string>
+    <string name="text_clear_all_users">Clear the list of users:</string>
+    <string name="text_clear_all_tasks">Clear the task list:</string>
+    <string name="vaccination_header">Vaccine registration:</string>
+    <string name="vaccination_header_list">List of vaccines:</string>
+    <string name="vaccination_hint">Name of the new vaccine</string>
+    <string name="vaccination_checkbox">Two - component</string>
+    <string name="toast_clear_users">The list of users has been deleted</string>
+    <string name="toast_clear_tasks">The list of tasks has been deleted</string>
+    <string name="toast_clear_vaccines">The list of vaccines has been deleted</string>
+    <string name="toast_new_vaccines">The vaccine has been successfully added!</string>
+    <string name="toast_new_vaccines_er">Enter the name of the new vaccine!</string>
+    <string name="select_header_vaccine">Vaccine:</string>
+    <string name="select_count_components">Components:</string>
     <!--  Строки для окна "Информация о пациентах"  -->
     <string name="header_select_user">Patient Information:</string>
     <!--  Строки для окна "Данные о вакцинах"  -->
     <string name="header_add_new_task">Enter the data vaccyna:</string>
     <string name="patient_add_new_task">Select a patient:</string>
     <string name="vaccine_add_new_task">Choose a vaccine:</string>
+    <string name="component_add_new_task">Choose a component:</string>
     <string name="date_add_new_task">Select the date and time of vaccination:</string>
+    <!--  Кнопки  -->
+    <string name="save_button">Send</string>
+    <string name="clear_button">Clear</string>
     <!--  Tests  -->
         <string-array name="spinner_test">
-        <item>Test 1</item>
-        <item>Test 2</item>
-        <item>Test 3</item>
+        <item>1</item>
+        <item>2</item>
     </string-array>
 </resources>

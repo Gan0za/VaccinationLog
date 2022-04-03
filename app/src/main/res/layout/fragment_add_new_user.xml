@@ -67,8 +67,8 @@
 
                 <Button
                     android:id="@+id/save_new_user"
-                    android:text="@string/save_button"
-                    style="@style/save_button_style"/>
+                    style="@style/save_button_style"
+                    android:text="@string/save_button" />
 
             </LinearLayout>
         </ScrollView>

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.verevkina.vaccinationlog.database.VaccinationDatabase
@@ -29,11 +30,28 @@ class AddNewUserFragment : Fragment() {
         viewModel = ViewModelProvider(this, viewModelFactory)
             .get(TrackerViewModel::class.java)
 
+        val toast_text = resources.getString(R.string.toast_text)
+        val toast_error = resources.getString(R.string.toast_error)
+        val duration = Toast.LENGTH_SHORT
+
         binding.saveNewUser.setOnClickListener {
-            viewModel.initNewUser(binding.SurnameUser.text.toString(),
-                binding.NameUser.text.toString(),
-                binding.MiddleNameUser.text.toString(),
-                binding.BirthdayUser.text.toString())
+            if (binding.SurnameUser.text.toString() != "" &&
+                binding.NameUser.text.toString() != "" &&
+                binding.BirthdayUser.text.toString() != "") {
+                viewModel.initNewUser(
+                    binding.SurnameUser.text.toString(),
+                    binding.NameUser.text.toString(),
+                    binding.MiddleNameUser.text.toString(),
+                    binding.BirthdayUser.text.toString()
+                )
+                Toast.makeText(application, toast_text, duration).show()
+                binding.SurnameUser.text.clear()
+                binding.NameUser.text.clear()
+                binding.MiddleNameUser.text.clear()
+                binding.BirthdayUser.text.clear()
+            } else {
+                Toast.makeText(application, toast_error, duration).show()
+            }
         }
 
         return binding.root

@@ -30,8 +30,8 @@ class SelectUserFragment : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentSelectUserBinding>(
             inflater, R.layout.fragment_select_user, container, false)
 
-        viewModel.ListUsersDB.observe(viewLifecycleOwner, Observer { ListUsersDB ->
-            binding.allUsers.text = ListUsersDB
+        viewModel.listUsersDB.observe(viewLifecycleOwner, Observer { listUsersDB ->
+            binding.allUsers.text = listUsersDB
         })
 
         return binding.root
