@@ -12,10 +12,10 @@
     <string name="settings_button">settings button</string>
     <!--  Строки для окна "Новый пользователь"  -->
     <string name="header_window_newuser">Enter the patient\'s details</string>
-    <string name="surname_window_newuser">Surname</string>
-    <string name="name_window_newuser">Name</string>
-    <string name="middlename_window_newuser">Middle Name</string>
-    <string name="text_window_newuser">Patient\'s birthday:</string>
+    <string name="surname_window_newuser">Surname:</string>
+    <string name="name_window_newuser">Name:</string>
+    <string name="middlename_window_newuser">Middle Name:</string>
+    <string name="text_window_newuser">Birthday:</string>
     <string name="toast_text">The user has been successfully added!</string>
     <string name="toast_error">Fill in all the fields!</string>
     <!--  Строки для окна "Информация"  -->

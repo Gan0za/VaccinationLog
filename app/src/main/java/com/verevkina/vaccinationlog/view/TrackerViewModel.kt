@@ -118,7 +118,7 @@ class TrackerViewModel(
         }
     }
 
-    //Получение списка вакцин
+    //Получение списка записей
     val tasks = dao.getAllHistory()
     val listTasksDB = Transformations.map(tasks) { tasks ->
         parselistTasksDB(tasks, application.resources)

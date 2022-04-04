@@ -11,10 +11,10 @@
     <string name="settings_button">кнопка настроек</string>
     <!--  Строки для окна "Новый пользователь"  -->
     <string name="header_window_newuser">Введите данные пациента:</string>
-    <string name="surname_window_newuser">Фамилия</string>
-    <string name="name_window_newuser">Имя</string>
-    <string name="middlename_window_newuser">Отчество</string>
-    <string name="text_window_newuser">День рождения пациента:</string>
+    <string name="surname_window_newuser">Фамилия:</string>
+    <string name="name_window_newuser">Имя:</string>
+    <string name="middlename_window_newuser">Отчество:</string>
+    <string name="text_window_newuser">День рождения:</string>
     <string name="toast_text">Пользователь успешно добавлен!</string>
     <string name="toast_error">Заполните все поля!</string>
     <!--  Строки для окна "Информация"  -->
