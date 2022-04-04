@@ -31,7 +31,9 @@ class AddNewTaskFragment : Fragment() {
             .get(TrackerViewModel::class.java)
         val binding = DataBindingUtil.inflate<FragmentAddNewTaskBinding>(
             inflater, R.layout.fragment_add_new_task, container, false)
-        val toast_clear_vaccines = resources.getString(R.string.toast_clear_vaccines)
+        val toast_add_new_task = resources.getString(R.string.toast_add_new_task)
+        val toast_error = resources.getString(R.string.toast_error)
+
         val duration = Toast.LENGTH_SHORT
 
         val adapterVaccines = VaccineAdapterList(application)
@@ -49,9 +51,22 @@ class AddNewTaskFragment : Fragment() {
         })
 
         binding.addNewTasks.setOnClickListener {
-            binding.textView2.text = binding.vaccinationId.selectedItemId.toString()
-            binding.textView.text = binding.userId.selectedItemId.toString()
-//            binding.textView4.text = binding.componentNumber.selectedItemId.toString()
+            if (binding.vaccinationId.selectedItemId >= 0 &&
+                    binding.userId.selectedItemId >= 0 &&
+                    binding.componentNumber.selectedItemId >= 0 &&
+                    binding.editTextDate.text.toString() != "" &&
+                    binding.editTextTime.text.toString() != ""){
+                viewModel.initNewTask(binding.userId.selectedItemId,
+                    binding.vaccinationId.selectedItemId,
+                    binding.componentNumber.selectedItemId + 1,
+                    binding.editTextDate.text.toString(),
+                    binding.editTextTime.text.toString()
+                )
+                Toast.makeText(application, toast_add_new_task, duration).show()
+                binding.editTextDate.text.clear()
+                binding.editTextTime.text.clear()
+            } else
+                Toast.makeText(application, toast_error, duration).show()
         }
 
 //        binding.userId.setOnClickListener {

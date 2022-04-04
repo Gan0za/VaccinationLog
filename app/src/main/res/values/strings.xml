@@ -46,6 +46,7 @@
     <string name="vaccine_add_new_task">Choose a vaccine:</string>
     <string name="component_add_new_task">Choose a component:</string>
     <string name="date_add_new_task">Select the date and time of vaccination:</string>
+    <string name="toast_add_new_task">Record successfully added!</string>
     <!--  Кнопки  -->
     <string name="save_button">Send</string>
     <string name="clear_button">Clear</string>

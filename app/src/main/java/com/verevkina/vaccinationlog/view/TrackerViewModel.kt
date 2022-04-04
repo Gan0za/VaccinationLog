@@ -3,10 +3,12 @@ package com.verevkina.vaccinationlog.view
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.Transformations
+import com.verevkina.vaccinationlog.database.HistoryEntitie
 import com.verevkina.vaccinationlog.database.UsersEntitie
 import com.verevkina.vaccinationlog.database.VaccinationLogDao
 import com.verevkina.vaccinationlog.database.VaccinesEntitie
 import com.verevkina.vaccinationlog.parseListUsersDB
+import com.verevkina.vaccinationlog.parselistTasksDB
 import com.verevkina.vaccinationlog.parselistVaccinesDB
 import kotlinx.coroutines.*
 
@@ -85,5 +87,40 @@ class TrackerViewModel(
     val vaccines = dao.getAllVaccines()
     val listVaccinesDB = Transformations.map(vaccines) { vaccines ->
         parselistVaccinesDB(vaccines, application.resources)
+    }
+
+    //Работа с записями
+    //Регистрация новой задачи
+    fun initNewTask(UserId: Long, VaccineId: Long, ComponentsVaccine: Long,
+                    DateVaccine: String, TimeVaccine: String) {
+        uiScope.launch {
+            val newTask = HistoryEntitie(UserId = UserId, VaccineId = VaccineId,
+                ComponentsVaccine = ComponentsVaccine, DateVaccine = DateVaccine,
+                TimeVaccine = TimeVaccine)
+            insertTask(newTask)
+        }
+    }
+    private suspend fun insertTask(vaccine: HistoryEntitie) {
+        withContext(Dispatchers.IO) {
+            dao.insertHistory(vaccine)
+        }
+    }
+
+    //Удаление Всех записей
+    fun clearAllTask() {
+        uiScope.launch {
+            clearAllTaskQueries()
+        }
+    }
+    private suspend fun clearAllTaskQueries() {
+        withContext(Dispatchers.IO) {
+            dao.clearHistory()
+        }
+    }
+
+    //Получение списка вакцин
+    val tasks = dao.getAllHistory()
+    val listTasksDB = Transformations.map(tasks) { tasks ->
+        parselistTasksDB(tasks, application.resources)
     }
 }

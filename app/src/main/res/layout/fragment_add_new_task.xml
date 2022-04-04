@@ -23,7 +23,7 @@
                         style="@style/main_menu_buttons"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/header_add_new_task"/>
+                        android:text="@string/patient_add_new_task"/>
 
                     <Spinner
                         android:id="@+id/user_id"

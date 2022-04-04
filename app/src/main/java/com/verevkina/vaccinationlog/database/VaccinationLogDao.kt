@@ -8,7 +8,7 @@ import androidx.room.Update
 
 @Dao
 interface VaccinationLogDao {
-    //Работа Users
+    //Hf,jnf c Users
     @Insert
     fun insertUser(user: UsersEntitie)
 
@@ -39,4 +39,27 @@ interface VaccinationLogDao {
 
     @Query("SELECT * FROM vaccines ORDER BY id_vaccine DESC")
     fun getAllVaccines(): LiveData<List<VaccinesEntitie>>
+
+    //Работа с History
+    @Insert
+    fun insertHistory(vaccine: HistoryEntitie)
+
+    @Query("DELETE FROM history")
+    fun clearHistory()
+
+    @Query("SELECT u.surname_user, u.name_user, u.birthday_user, " +
+            "v.name_vaccine, h.components_vaccine, h.date_vaccine, h.time_vaccine " +
+            "FROM history AS h " +
+            "LEFT JOIN users AS u ON u.id_user = h.user_id " +
+            "LEFT JOIN vaccines AS v ON v.id_vaccine = h.vaccine_id " +
+            "WHERE h.id_history = :key")
+    fun getHistory(key: Long): HistoryEntitieAll?
+
+    @Query("SELECT u.surname_user, u.name_user, u.birthday_user, " +
+            "v.name_vaccine, h.components_vaccine, h.date_vaccine, h.time_vaccine " +
+            "FROM history AS h " +
+            "LEFT JOIN users AS u ON u.id_user = h.user_id " +
+            "LEFT JOIN vaccines AS v ON v.id_vaccine = h.vaccine_id " +
+            "ORDER BY h.id_history DESC")
+    fun getAllHistory(): LiveData<List<HistoryEntitieAll>>
 }

@@ -35,6 +35,7 @@ class SettingsMenuFragment : Fragment() {
         val toast_new_vaccines = resources.getString(R.string.toast_new_vaccines)
         val toast_new_vaccines_er = resources.getString(R.string.toast_new_vaccines_er)
         val toast_clear_vaccines = resources.getString(R.string.toast_clear_vaccines)
+        val toast_clear_tasks = resources.getString(R.string.toast_clear_tasks)
         val duration = Toast.LENGTH_SHORT
 
 
@@ -49,9 +50,15 @@ class SettingsMenuFragment : Fragment() {
             Toast.makeText(application, toast_clear_users, duration).show()
         }
 
+        binding.clearAllTask.setOnClickListener {
+            viewModel.clearAllTask()
+            Toast.makeText(application, toast_clear_tasks, duration).show()
+        }
+
         binding.saveNewVaccine.setOnClickListener {
             if (binding.vaccinationName.text.toString() != "") {
                 viewModel.initNewVaccine(binding.vaccinationName.text.toString(), binding.vaccinationComponent.isChecked)
+                binding.vaccinationName.text.clear()
                 Toast.makeText(application, toast_new_vaccines, duration).show()
             } else
                 Toast.makeText(application, toast_new_vaccines_er, duration).show()

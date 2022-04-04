@@ -20,5 +20,8 @@ data class HistoryEntitie (
     var DateVaccine: String,
 
     @ColumnInfo(name = "time_vaccine")
-    var TimeVaccine: String
+    var TimeVaccine: String,
+
+    @ColumnInfo(name = "vaccine_id")
+    var VaccineId: Long
 )

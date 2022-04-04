@@ -45,6 +45,7 @@
     <string name="vaccine_add_new_task">Выберите вакцину:</string>
     <string name="component_add_new_task">Выберите компонент:</string>
     <string name="date_add_new_task">Выберите дату и время привития:</string>
+    <string name="toast_add_new_task">Запись успешно добавлена!</string>
     <!--  Кнопки  -->
     <string name="save_button">Отправить</string>
     <string name="clear_button">Очистить</string>
