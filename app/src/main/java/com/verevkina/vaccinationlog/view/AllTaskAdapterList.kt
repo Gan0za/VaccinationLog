@@ -23,13 +23,13 @@ class AllTaskAdapterList: RecyclerView.Adapter<TaskViewHolder>() {
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
         val item = data[position]
         val res = holder.itemView.resources
-        holder.qualiti_user_surname.text = item.surname_user
-        holder.qualiti_user_name.text = item.name_user
-        holder.qualiti_user_birthday.text = item.birthday_user
-        holder.qualiti_user_vaccine.text = item.name_vaccine
-        holder.qualiti_user_component.text = item.components_vaccine.toString()
-        holder.qualiti_user_date.text = item.date_vaccine
-        holder.qualiti_user_time.text = item.time_vaccine
+        holder.qualiti_task_surname.text = item.surname_user
+        holder.qualiti_task_name.text = item.name_user
+        holder.qualiti_task_birthday.text = item.birthday_user
+        holder.qualiti_task_vaccine.text = item.name_vaccine
+        holder.qualiti_task_component.text = item.components_vaccine.toString()
+        holder.qualiti_task_date.text = item.date_vaccine
+        holder.qualiti_task_time.text = item.time_vaccine
 
     }
 

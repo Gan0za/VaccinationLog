@@ -18,7 +18,7 @@
             android:text="@string/surname_window_newuser"
             android:textSize="@dimen/text_size"/>
         <TextView
-            android:id="@+id/qualiti_task_surname"
+            android:id="@+id/qualiti_user_surname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -38,7 +38,7 @@
             android:text="@string/name_window_newuser"
             android:textSize="@dimen/text_size"/>
         <TextView
-            android:id="@+id/qualiti_task_name"
+            android:id="@+id/qualiti_user_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -55,95 +55,35 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            android:text="@string/middlename_window_newuser"
+            android:textSize="@dimen/text_size"/>
+        <TextView
+            android:id="@+id/qualiti_user_middlename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Middle Name"
+            android:textSize="@dimen/text_size"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:text="@string/text_window_newuser"
             android:textSize="@dimen/text_size"/>
         <TextView
-            android:id="@+id/qualiti_task_birthday"
+            android:id="@+id/qualiti_user_birthday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:text="11.11.1111"
-            android:textSize="@dimen/text_size"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="@string/select_header_vaccine"
-            android:textSize="@dimen/text_size"/>
-        <TextView
-            android:id="@+id/qualiti_task_vaccine"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="Test"
-            android:textSize="@dimen/text_size"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="Компонет:"
-            android:textSize="@dimen/text_size"/>
-        <TextView
-            android:id="@+id/qualiti_task_component"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="1"
-            android:textSize="@dimen/text_size"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="Дата:"
-            android:textSize="@dimen/text_size"/>
-        <TextView
-            android:id="@+id/qualiti_task_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="11.11.1111"
-            android:textSize="@dimen/text_size"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="Время:"
-            android:textSize="@dimen/text_size"/>
-        <TextView
-            android:id="@+id/qualiti_task_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="11:00"
             android:textSize="@dimen/text_size"/>
     </LinearLayout>
 </LinearLayout>

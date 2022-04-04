@@ -17,19 +17,14 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
 
-<!--                <androidx.recyclerview.widget.RecyclerView-->
-<!--                    android:id="@+id/select_users"-->
-<!--                    style="@style/main_menu_buttons"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
-<!--                    />-->
-
-                <TextView
-                    android:id="@+id/allUsers"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/select_users"
+                    style="@style/main_menu_buttons"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/main_menu_buttons"/>
+                    android:layout_height="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    />
+
             </LinearLayout>
         </ScrollView>
     </FrameLayout>

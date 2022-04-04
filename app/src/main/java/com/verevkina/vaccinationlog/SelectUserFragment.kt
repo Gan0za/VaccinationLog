@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.verevkina.vaccinationlog.database.VaccinationDatabase
 import com.verevkina.vaccinationlog.databinding.FragmentSelectUserBinding
 import com.verevkina.vaccinationlog.view.AllTaskAdapterList
+import com.verevkina.vaccinationlog.view.AllUserAdapterList
 import com.verevkina.vaccinationlog.view.TrackerViewModel
 import com.verevkina.vaccinationlog.view.TrackerViewModelFactory
 
@@ -31,9 +32,15 @@ class SelectUserFragment : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentSelectUserBinding>(
             inflater, R.layout.fragment_select_user, container, false)
 
-        viewModel.listUsersDB.observe(viewLifecycleOwner, Observer { listUsersDB ->
-            binding.allUsers.text = listUsersDB
+        val adapter_user = AllUserAdapterList()
+        binding.selectUsers.adapter = adapter_user
+        viewModel.users.observe(viewLifecycleOwner, Observer { users ->
+            if (users != null)
+                adapter_user.data = users
         })
+//        viewModel.listUsersDB.observe(viewLifecycleOwner, Observer { listUsersDB ->
+//            binding.allUsers.text = listUsersDB
+//        })
 
         return binding.root
     }
