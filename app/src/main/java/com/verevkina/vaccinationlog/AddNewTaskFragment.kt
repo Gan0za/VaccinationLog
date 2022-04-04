@@ -69,11 +69,6 @@ class AddNewTaskFragment : Fragment() {
                 Toast.makeText(application, toast_error, duration).show()
         }
 
-//        binding.userId.setOnClickListener {
-//            Toast.makeText(application, binding.userId.selectedItemId.toString(), duration).show()
-//        }
-
-
         return binding.root
     }
 }

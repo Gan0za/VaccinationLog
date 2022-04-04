@@ -5,15 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import com.verevkina.vaccinationlog.database.VaccinationDatabase
 import com.verevkina.vaccinationlog.databinding.FragmentSelectUserBinding
-import com.verevkina.vaccinationlog.view.AllTaskAdapterList
-import com.verevkina.vaccinationlog.view.AllUserAdapterList
-import com.verevkina.vaccinationlog.view.TrackerViewModel
-import com.verevkina.vaccinationlog.view.TrackerViewModelFactory
+import com.verevkina.vaccinationlog.view.*
 
 class SelectUserFragment : Fragment() {
 
@@ -32,15 +34,23 @@ class SelectUserFragment : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentSelectUserBinding>(
             inflater, R.layout.fragment_select_user, container, false)
 
-        val adapter_user = AllUserAdapterList()
+        val adapter_user = AllUserAdapterList(object: UserOnClickListner {
+            override fun userOnClick(
+                id: String,
+                SurnameUser: String,
+                NameUser: String,
+                MiddleNameUser: String,
+                BirthdayUser: String
+            ) {
+                Toast.makeText(application, id, Toast.LENGTH_SHORT).show()
+//                Navigation.findNavController().navigate(R.id.action_selectTaskFragment_to_searchUserFragment)
+            }
+        })
         binding.selectUsers.adapter = adapter_user
         viewModel.users.observe(viewLifecycleOwner, Observer { users ->
             if (users != null)
                 adapter_user.data = users
         })
-//        viewModel.listUsersDB.observe(viewLifecycleOwner, Observer { listUsersDB ->
-//            binding.allUsers.text = listUsersDB
-//        })
 
         return binding.root
     }

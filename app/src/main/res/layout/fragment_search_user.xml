@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AddNewUserFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/SurnameUserSearch"
+                    style="@style/main_menu_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/surname_window_newuser"
+                    android:text="Test"
+                    android:inputType="text"
+                    android:textAlignment="center"
+                    android:autofillHints="@string/surname_window_newuser"/>
+
+                <EditText
+                    android:id="@+id/NameUserSearch"
+                    style="@style/main_menu_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name_window_newuser"
+                    android:inputType="text"
+                    android:text="Test2"
+                    android:textAlignment="center"
+                    android:autofillHints="@string/name_window_newuser" />
+
+                <EditText
+                    android:id="@+id/MiddleNameUserSearch"
+                    style="@style/main_menu_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/middlename_window_newuser"
+                    android:inputType="text"
+                    android:text="Test3"
+                    android:textAlignment="center"
+                    android:autofillHints="@string/middlename_window_newuser"/>
+
+                <TextView
+                    style="@style/main_menu_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:text="@string/text_window_newuser" />
+
+                <EditText
+                    android:id="@+id/BirthdayUserSearch"
+                    style="@style/main_menu_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/date_edit_text"
+                    android:text="11.11.2000"
+                    android:inputType="date"
+                    android:textAlignment="center"
+                    android:autofillHints="@string/date_edit_text"/>
+
+                <Button
+                    android:id="@+id/save_new_user_search"
+                    style="@style/save_button_style"
+                    android:text="@string/save_button" />
+
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</layout>

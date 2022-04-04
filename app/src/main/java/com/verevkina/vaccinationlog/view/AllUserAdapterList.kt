@@ -7,7 +7,7 @@ import com.verevkina.vaccinationlog.R
 import com.verevkina.vaccinationlog.database.HistoryEntitieAll
 import com.verevkina.vaccinationlog.database.UsersEntitie
 
-class AllUserAdapterList: RecyclerView.Adapter<UserViewHolder>() {
+class AllUserAdapterList(private val onClickListner: UserOnClickListner): RecyclerView.Adapter<UserViewHolder>() {
     var data = listOf<UsersEntitie>()
         set(value) {
             field = value
@@ -29,6 +29,10 @@ class AllUserAdapterList: RecyclerView.Adapter<UserViewHolder>() {
         holder.qualiti_user_middlename.text = item.MiddleNameUser
         holder.qualiti_user_birthday.text = item.BirthdayUser
 
+        holder.qualiti_user_id.setOnClickListener {
+            onClickListner.userOnClick(item.idUser.toString(), item.SurnameUser,
+                item.NameUser, item.MiddleNameUser, item.BirthdayUser)
+        }
     }
 
     override fun getItemCount(): Int {

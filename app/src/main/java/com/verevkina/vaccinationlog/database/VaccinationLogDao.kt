@@ -8,13 +8,15 @@ import androidx.room.Update
 
 @Dao
 interface VaccinationLogDao {
-    //Hf,jnf c Users
+    //Работа c Users
+    //Регистрация пользователя
     @Insert
     fun insertUser(user: UsersEntitie)
 
     @Update
     fun updateUser(user: UsersEntitie)
 
+    //Удаление пользователей
     @Query("DELETE FROM users")
     fun clearUsers()
 
