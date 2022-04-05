@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.verevkina.vaccinationlog.R
 import com.verevkina.vaccinationlog.database.HistoryEntitieAll
 
-class AllTaskAdapterList: RecyclerView.Adapter<TaskViewHolder>() {
+//Адаптер для списка всех привитых
+//
+class AllTaskAdapterList(private val onClickListner: TaskOnClickListner): RecyclerView.Adapter<TaskViewHolder>() {
     var data = listOf<HistoryEntitieAll>()
         set(value) {
             field = value
@@ -31,6 +33,9 @@ class AllTaskAdapterList: RecyclerView.Adapter<TaskViewHolder>() {
         holder.qualiti_task_date.text = item.date_vaccine
         holder.qualiti_task_time.text = item.time_vaccine
 
+        holder.qualiti_task_id.setOnClickListener {
+            onClickListner.taskOnClick (item.id_history.toString())
+        }
     }
 
     override fun getItemCount(): Int {

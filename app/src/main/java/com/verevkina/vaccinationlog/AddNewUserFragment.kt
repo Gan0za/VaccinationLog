@@ -44,13 +44,13 @@ class AddNewUserFragment : Fragment() {
                     binding.MiddleNameUser.text.toString(),
                     binding.BirthdayUser.text.toString()
                 )
-                Toast.makeText(application, toast_text, duration).show()
-                binding.SurnameUser.text.clear()
+                Toast.makeText(application, toast_text, duration).show() // Сообщение об усп.регистрации
+                binding.SurnameUser.text.clear() //Очищаем поля
                 binding.NameUser.text.clear()
                 binding.MiddleNameUser.text.clear()
                 binding.BirthdayUser.text.clear()
             } else {
-                Toast.makeText(application, toast_error, duration).show()
+                Toast.makeText(application, toast_error, duration).show() //Сообщение об ошибке
             }
         }
 

@@ -24,22 +24,23 @@ class AddNewTaskFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val application = requireNotNull(this.activity).application
+        val application = requireNotNull(this.activity).application //Инициализация класса для общения с бд
         val dao = VaccinationDatabase.getInstance(application).getVaccinationLogDao()
         val viewModelFactory = TrackerViewModelFactory(dao, application)
         viewModel = ViewModelProvider(this, viewModelFactory)
             .get(TrackerViewModel::class.java)
+
         val binding = DataBindingUtil.inflate<FragmentAddNewTaskBinding>(
             inflater, R.layout.fragment_add_new_task, container, false)
-        val toast_add_new_task = resources.getString(R.string.toast_add_new_task)
-        val toast_error = resources.getString(R.string.toast_error)
 
+        val toast_add_new_task = resources.getString(R.string.toast_add_new_task) //Текст для сообщений
+        val toast_error = resources.getString(R.string.toast_error)
         val duration = Toast.LENGTH_SHORT
 
-        val adapterVaccines = VaccineAdapterList(application)
+        val adapterVaccines = VaccineAdapterList(application) //Адапторы
         val adapterUsers = UsersAdapterList(application)
 
-        binding.vaccinationId.adapter = adapterVaccines
+        binding.vaccinationId.adapter = adapterVaccines //Инициализация вып. списков
         binding.userId.adapter = adapterUsers
         viewModel.vaccines.observe(viewLifecycleOwner, Observer { vaccines ->
             if (vaccines != null)
@@ -50,6 +51,7 @@ class AddNewTaskFragment : Fragment() {
                 adapterUsers.dataUsers = users
         })
 
+        //регистрация записи о вакцине
         binding.addNewTasks.setOnClickListener {
             if (binding.vaccinationId.selectedItemId >= 0 &&
                     binding.userId.selectedItemId >= 0 &&
@@ -62,11 +64,11 @@ class AddNewTaskFragment : Fragment() {
                     binding.editTextDate.text.toString(),
                     binding.editTextTime.text.toString()
                 )
-                Toast.makeText(application, toast_add_new_task, duration).show()
+                Toast.makeText(application, toast_add_new_task, duration).show() //Сообщаем об успехе
                 binding.editTextDate.text.clear()
                 binding.editTextTime.text.clear()
             } else
-                Toast.makeText(application, toast_error, duration).show()
+                Toast.makeText(application, toast_error, duration).show() //Сообщаем об ошибке
         }
 
         return binding.root

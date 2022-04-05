@@ -12,6 +12,7 @@ import com.verevkina.vaccinationlog.parselistTasksDB
 import com.verevkina.vaccinationlog.parselistVaccinesDB
 import kotlinx.coroutines.*
 
+//Полное обращение к БД
 class TrackerViewModel(
     val dao: VaccinationLogDao,
     application: Application) : AndroidViewModel(application) {
@@ -23,7 +24,7 @@ class TrackerViewModel(
     }
     private val uiScope = CoroutineScope(Dispatchers.Main +  viewModelJob)
 
-    //Объявление свойств с данными:
+    //Работа с пользователями:
     //Получение списка пользователей
     val users = dao.getAllUsers()
     val listUsersDB = Transformations.map(users) { users ->
@@ -57,6 +58,17 @@ class TrackerViewModel(
         }
     }
 
+    fun clearToUser(id: String) {
+        uiScope.launch {
+            clearToUserQueries(id)
+        }
+    }
+    private suspend fun clearToUserQueries(id: String) {
+        withContext(Dispatchers.IO) {
+            dao.clearToUsers(id)
+        }
+    }
+
     //Работа с Vaccine
     //Регистрация новой вакцины
     fun initNewVaccine(NameVaccine: String, ComponentsVaccine: Boolean) {
@@ -80,6 +92,17 @@ class TrackerViewModel(
     private suspend fun clearAllVaccineQueries() {
         withContext(Dispatchers.IO) {
             dao.clearVaccines()
+        }
+    }
+
+    fun clearToVaccine(id: String) {
+        uiScope.launch {
+            clearToVaccineQueries(id)
+        }
+    }
+    private suspend fun clearToVaccineQueries(id: String) {
+        withContext(Dispatchers.IO) {
+            dao.clearToVaccines(id)
         }
     }
 
@@ -115,6 +138,17 @@ class TrackerViewModel(
     private suspend fun clearAllTaskQueries() {
         withContext(Dispatchers.IO) {
             dao.clearHistory()
+        }
+    }
+
+    fun clearToTask(id: String) {
+        uiScope.launch {
+            clearToTaskQueries(id)
+        }
+    }
+    private suspend fun clearToTaskQueries(id: String) {
+        withContext(Dispatchers.IO) {
+            dao.clearToHistory(id)
         }
     }
 

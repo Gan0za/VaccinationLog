@@ -4,9 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.verevkina.vaccinationlog.R
-import com.verevkina.vaccinationlog.database.HistoryEntitieAll
 import com.verevkina.vaccinationlog.database.UsersEntitie
 
+//Адаптер для списка пациентов
 class AllUserAdapterList(private val onClickListner: UserOnClickListner): RecyclerView.Adapter<UserViewHolder>() {
     var data = listOf<UsersEntitie>()
         set(value) {
@@ -30,8 +30,7 @@ class AllUserAdapterList(private val onClickListner: UserOnClickListner): Recycl
         holder.qualiti_user_birthday.text = item.BirthdayUser
 
         holder.qualiti_user_id.setOnClickListener {
-            onClickListner.userOnClick(item.idUser.toString(), item.SurnameUser,
-                item.NameUser, item.MiddleNameUser, item.BirthdayUser)
+            onClickListner.userOnClick(item.idUser.toString())
         }
     }
 

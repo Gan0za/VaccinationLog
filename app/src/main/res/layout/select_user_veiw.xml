@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/qualiti_user_id"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -87,4 +86,9 @@
             android:text="11.11.1111"
             android:textSize="@dimen/text_size"/>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/qualiti_user_id"
+        android:text="@string/clear_button"
+        style="@style/save_button_style"/>
 </LinearLayout>

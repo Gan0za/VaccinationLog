@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.verevkina.vaccinationlog.R
 import com.verevkina.vaccinationlog.database.VaccinesEntitie
 
+//Адаптер для списка Вакцин в меню Настроек
 class VaccineAdapter: RecyclerView.Adapter<VaccineViewHolder>() {
     var data = listOf<VaccinesEntitie>()
         set(value) {

@@ -146,4 +146,8 @@
             android:text="11:00"
             android:textSize="@dimen/text_size"/>
     </LinearLayout>
+    <Button
+        android:id="@+id/qualiti_task_id"
+        android:text="@string/clear_button"
+        style="@style/save_button_style"/>
 </LinearLayout>

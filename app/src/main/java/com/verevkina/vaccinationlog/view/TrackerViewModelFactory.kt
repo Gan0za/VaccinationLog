@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.verevkina.vaccinationlog.database.VaccinationLogDao
 
+//Вспомагательный класс для TrackerViewModel
 class TrackerViewModelFactory (
     private val dao: VaccinationLogDao,
     private val application: Application) : ViewModelProvider.Factory {

@@ -1,7 +1,7 @@
 package com.verevkina.vaccinationlog.database
 
 data class HistoryEntitieAll (
-
+    val id_history: Long,
     val surname_user: String,
     val name_user: String,
     val birthday_user: String,

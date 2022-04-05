@@ -9,6 +9,7 @@ import android.widget.TextView
 import com.verevkina.vaccinationlog.R
 import com.verevkina.vaccinationlog.database.VaccinesEntitie
 
+//Адаптар для выподающего списка вакцин
 class VaccineAdapterList(val context: Context?) : BaseAdapter() {
     var dataVaccine = listOf<VaccinesEntitie>()
         set(value) {

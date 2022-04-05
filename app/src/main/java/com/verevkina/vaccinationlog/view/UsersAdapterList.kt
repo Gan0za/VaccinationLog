@@ -9,6 +9,7 @@ import android.widget.TextView
 import com.verevkina.vaccinationlog.R
 import com.verevkina.vaccinationlog.database.UsersEntitie
 
+//Адаптар для выподающего списка пользователей
 class UsersAdapterList(val context: Context?): BaseAdapter() {
     var dataUsers = listOf<UsersEntitie>()
         set(value) {
